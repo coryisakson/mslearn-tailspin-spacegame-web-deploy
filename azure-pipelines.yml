@@ -136,7 +136,9 @@ stages:
     pool:
       vmImage: 'Ubuntu-16.04'
     variables:
-      jmeterVersion: '5.2'
+    - name:  jmeterVersion
+      value: '5.2'
+    - group: 'Release'
     steps: 
     - script: |
         wget -c ftp.ps.pl/pub/apache/jmeter/binaries/apache-jmeter-$(jmeterVersion).tgz
